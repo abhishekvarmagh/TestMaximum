@@ -1,5 +1,7 @@
 package com.generic;
 
+import java.util.Arrays;
+
 public class FindMaximumNumber<E extends Comparable<E>> {
 
     E firstNumber;
@@ -16,12 +18,17 @@ public class FindMaximumNumber<E extends Comparable<E>> {
         return largest(firstNumber, secondNumber, thirdNumber);
     }
 
-    public static <E extends Comparable<E>> E largest(E firstNumber, E secondNumber, E thirdNumber) {
+    public static <E extends Comparable<E>> E largest(E firstNumber, E secondNumber, E thirdNumber, E... option) {
         E max = firstNumber;
         if (secondNumber.compareTo(max) > 0)
             max = secondNumber;
         if (thirdNumber.compareTo(max) > 0)
             max = thirdNumber;
+        if (option.length != 0) {
+            Arrays.sort(option);
+            if (option[option.length - 1].compareTo(max) > 0)
+                max = option[option.length - 1];
+        }
         return max;
     }
 }
