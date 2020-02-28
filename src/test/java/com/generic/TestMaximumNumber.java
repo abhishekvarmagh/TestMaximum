@@ -31,4 +31,22 @@ public class TestMaximumNumber {
         int largest = max.largest(2,1,3);
         Assert.assertEquals(3, largest);
     }
+
+    @Test
+    public void givenMaxFloatNumber_AtFirstPosition_ShouldReturnSameNumber() {
+        float largest = max.largest(3.0f, 2.0f, 1.0f);
+        Assert.assertEquals(3.0f, largest,0.0f );
+    }
+
+    @Test
+    public void givenMaxFloatNumber_AtSecondPosition_ShouldReturnSameNumber() {
+        float largest = max.largest(2.0f, 3.0f, 1.0f);
+        Assert.assertEquals(3.0f, largest, 0.0f);
+    }
+
+    @Test
+    public void givenMaxFloatNumber_AtThirdPosition_ShouldReturnSameNumber() {
+        float largest = max.largest(2.0f, 1.0f, 3.0f);
+        Assert.assertEquals(3.0f,largest,0.0f);
+    }
 }

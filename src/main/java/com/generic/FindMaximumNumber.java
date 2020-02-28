@@ -10,4 +10,13 @@ public class FindMaximumNumber {
             max = thirdNumber;
         return max;
     }
+
+    public Float largest(Float firstNumber, Float secondNumber, Float thirdNumber){
+        Float max = firstNumber;
+        if (secondNumber.compareTo(max) > 0)
+            max = secondNumber;
+        if (thirdNumber.compareTo(max) > 0)
+            max = thirdNumber;
+        return max;
+    }
 }
