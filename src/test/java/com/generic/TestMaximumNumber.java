@@ -49,4 +49,22 @@ public class TestMaximumNumber {
         float largest = max.largest(2.0f, 1.0f, 3.0f);
         Assert.assertEquals(3.0f,largest,0.0f);
     }
+
+    @Test
+    public void givenMaxString_AtFirstPosition_ShouldReturnSameString() {
+        String largest = max.largest("Peach","Banana","Apple");
+        Assert.assertEquals("Peach",largest);
+    }
+
+    @Test
+    public void givenMaxString_AtSecondPosition_ShouldReturnSameString() {
+        String largest = max.largest("Banana","Peach","Apple");
+        Assert.assertEquals("Peach",largest);
+    }
+
+    @Test
+    public void givenMaxString_AtThirdPosition_ShouldReturnSameString() {
+        String largest = max.largest("Banana","Apple","Peach");
+        Assert.assertEquals("Peach",largest);
+    }
 }
