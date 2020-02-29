@@ -29,6 +29,11 @@ public class FindMaximumNumber<E extends Comparable<E>> {
             if (option[option.length - 1].compareTo(max) > 0)
                 max = option[option.length - 1];
         }
+        printMax(max);
         return max;
+    }
+
+    private static <E extends Comparable<E>> void printMax(E max) {
+        System.out.println("Max is "+max);
     }
 }

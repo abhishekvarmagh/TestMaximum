@@ -7,38 +7,38 @@ public class TestMaximumNumber {
 
     @Test
     public void givenMaxNumber_AtFirstPosition_ShouldReturnSameNumber() {
-        FindMaximumNumber max = new FindMaximumNumber(3, 2, 1);
-        Assert.assertEquals(3, max.largest());
+        FindMaximumNumber max = new FindMaximumNumber(9, 2, 1);
+        Assert.assertEquals(9, max.largest());
     }
 
     @Test
     public void givenMaxNumber_AtSecondPosition_ShouldReturnSameNumber() {
-        FindMaximumNumber max = new FindMaximumNumber(2, 3, 1);
-        Assert.assertEquals(3, max.largest());
+        FindMaximumNumber max = new FindMaximumNumber(2, 10, 1);
+        Assert.assertEquals(10, max.largest());
     }
 
     @Test
     public void givenMaxNumber_AtThirdPosition_ShouldReturnSameNumber() {
-        FindMaximumNumber max = new FindMaximumNumber(2, 1, 3);
-        Assert.assertEquals(3, max.largest());
+        FindMaximumNumber max = new FindMaximumNumber(2, 1, 7);
+        Assert.assertEquals(7, max.largest());
     }
 
     @Test
     public void givenMaxFloatNumber_AtFirstPosition_ShouldReturnSameNumber() {
-        FindMaximumNumber max = new FindMaximumNumber(3.0f, 2.0f, 1.0f);
-        Assert.assertEquals(3.0f, (Float) max.largest(), 0.0f);
+        FindMaximumNumber max = new FindMaximumNumber(9.0f, 2.0f, 1.0f);
+        Assert.assertEquals(9.0f, (Float) max.largest(), 0.0f);
     }
 
     @Test
     public void givenMaxFloatNumber_AtSecondPosition_ShouldReturnSameNumber() {
-        FindMaximumNumber max = new FindMaximumNumber(2.0f, 3.0f, 1.0f);
-        Assert.assertEquals(3.0f, (Float) max.largest(), 0.0f);
+        FindMaximumNumber max = new FindMaximumNumber(2.0f, 10.0f, 1.0f);
+        Assert.assertEquals(10.0f, (Float) max.largest(), 0.0f);
     }
 
     @Test
     public void givenMaxFloatNumber_AtThirdPosition_ShouldReturnSameNumber() {
-        FindMaximumNumber max = new FindMaximumNumber(2.0f, 1.0f, 3.0f);
-        Assert.assertEquals(3.0f, (Float) max.largest(), 0.0f);
+        FindMaximumNumber max = new FindMaximumNumber(2.0f, 1.0f, 7.0f);
+        Assert.assertEquals(7.0f, (Float) max.largest(), 0.0f);
     }
 
     @Test
@@ -49,14 +49,14 @@ public class TestMaximumNumber {
 
     @Test
     public void givenMaxString_AtSecondPosition_ShouldReturnSameString() {
-        FindMaximumNumber max = new FindMaximumNumber("Banana", "Peach", "Apple");
-        Assert.assertEquals("Peach", max.largest());
+        FindMaximumNumber max = new FindMaximumNumber("Banana", "Orange", "Apple");
+        Assert.assertEquals("Orange", max.largest());
     }
 
     @Test
     public void givenMaxString_AtThirdPosition_ShouldReturnSameString() {
-        FindMaximumNumber max = new FindMaximumNumber("Banana", "Apple", "Peach");
-        Assert.assertEquals("Peach", max.largest());
+        FindMaximumNumber max = new FindMaximumNumber("Banana", "Apple", "Mango");
+        Assert.assertEquals("Mango", max.largest());
     }
 
     @Test
